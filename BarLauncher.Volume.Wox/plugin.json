@@ -4,7 +4,7 @@
   "Name": "Change volume",
   "Description": "Change/Set volume from Wox",
   "Author": "gissehel",
-  "Version": "0.0.3",
+  "Version": "1.0.0",
   "Language": "csharp",
   "Website": "https://github.com/gissehel/BarLauncher-Volume",
   "IcoPath": "BarLauncher-Volume-64.png",
