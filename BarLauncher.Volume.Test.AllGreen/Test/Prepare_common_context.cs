@@ -14,6 +14,12 @@ namespace BarLauncher.Volume.Test.AllGreen.Test
         public override void DoTest() =>
             StartTest()
 
+            .Using<Application_information_fixture>()
+            .DoAction(f => f.Application_name_is("BarLauncher_Volume"))
+            .DoAction(f => f.Application_verison_is("0.0.0"))
+            .DoAction(f => f.Application_url_is("https://example.com/BarLauncher_Volume"))
+            .EndUsing()
+
             .Using<Volume_fixture>()
             .DoAction(f => f.Change_the_system_volume_to(73))
             .EndUsing()

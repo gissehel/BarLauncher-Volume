@@ -4,16 +4,21 @@ using BarLauncher.Volume.Core.Service;
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using BarLauncher.Volume.Lib.Core.Service;
 
 namespace BarLauncher.Volume.Lib.Service
 {
     public class VolumeResultFinder : BarLauncherResultFinder
     {
         private IVolumeService VolumeService { get; set; }
+        private IApplicationInformations ApplicationInformations { get; set; }
+        private ISystemService SystemService { get; set; }
 
-        public VolumeResultFinder(IBarLauncherContextService barLauncherContextService, IVolumeService volumeService) : base(barLauncherContextService)
+        public VolumeResultFinder(IBarLauncherContextService barLauncherContextService, IVolumeService volumeService, IApplicationInformations applicationInformations, ISystemService systemService) : base(barLauncherContextService)
         {
             VolumeService = volumeService;
+            ApplicationInformations = applicationInformations;
+            SystemService = systemService;
         }
 
         public override void Init()
@@ -26,6 +31,16 @@ namespace BarLauncher.Volume.Lib.Service
         {
             AddCommand("set", () => "set [VALUE]", () => "Set volume to VALUE (current volume: {0})".FormatWith(VolumeService.Volume), VolumeCommand);
             AddCommand("change", () => "change [+/-]", () => "Increase/decrease volume with symboles + or - (current volume: {0})".FormatWith(VolumeService.Volume), ChangeCommand);
+            AddCommand
+            (
+                "help",
+                "help",
+                "{0} version {1} - (Go to {0} main web site)".FormatWith(ApplicationInformations.ApplicationName, ApplicationInformations.Version),
+                () =>
+                {
+                    SystemService.OpenUrl(ApplicationInformations.HomepageUrl);
+                }
+            );
 
             AddDefaultCommand(VolumeCommand);
         }

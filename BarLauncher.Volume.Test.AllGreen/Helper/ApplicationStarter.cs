@@ -42,7 +42,7 @@ namespace BarLauncher.Volume.Test.AllGreen.Helper
             QueryService = new QueryServiceMock();
             BarLauncherContextService = new BarLauncherContextServiceMock(QueryService);
             VolumeService = new VolumeServiceMock();
-            VolumeResultFinder = new VolumeResultFinder(BarLauncherContextService, VolumeService);
+            VolumeResultFinder = new VolumeResultFinder(BarLauncherContextService, VolumeService, ApplicationInformations, SystemService);
 
             BarLauncherContextService.AddQueryFetcher("vol", VolumeResultFinder);
         }

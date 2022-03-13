@@ -25,6 +25,7 @@ namespace BarLauncher.Volume.Test.AllGreen.Test
             .With<BarLauncher_results_fixture.Result>(r => r.Title, r => r.SubTitle)
             .Check("set [VALUE]", "Set volume to VALUE (current volume: 73)")
             .Check("change [+/-]", "Increase/decrease volume with symboles + or - (current volume: 73)")
+            .Check("help", "BarLauncher_Volume version 0.0.0 - (Go to BarLauncher_Volume main web site)")
             .EndUsing()
 
             .Using<BarLauncher_bar_fixture>()

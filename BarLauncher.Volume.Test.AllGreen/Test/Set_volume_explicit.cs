@@ -34,6 +34,7 @@ namespace BarLauncher.Volume.Test.AllGreen.Test
             .With<BarLauncher_results_fixture.Result>(r => r.Title, r => r.SubTitle)
             .Check("set [VALUE]", "Set volume to VALUE (current volume: 73)")
             .Check("change [+/-]", "Increase/decrease volume with symboles + or - (current volume: 73)")
+            .Check("help", "BarLauncher_Volume version 0.0.0 - (Go to BarLauncher_Volume main web site)")
             .EndUsing()
 
             .Using<BarLauncher_bar_fixture>()
@@ -93,7 +94,7 @@ namespace BarLauncher.Volume.Test.AllGreen.Test
             .Using<BarLauncher_bar_fixture>()
             .DoAction(f => f.Display_bar_launcher())
             .DoAction(f => f.Write_query("vol"))
-            .DoCheck(f => f.The_number_of_results_is(), "2")
+            .DoCheck(f => f.The_number_of_results_is(), "3")
             .DoCheck(f => f.The_title_of_result__is(1), "set [VALUE]")
             .DoCheck(f => f.The_subtitle_of_result__is(1), "Set volume to VALUE (current volume: 41)")
 
