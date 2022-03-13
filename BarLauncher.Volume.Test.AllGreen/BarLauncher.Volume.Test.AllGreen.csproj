@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BarLauncher.EasyHelper" Version="2.0.7-1647122617" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+		<PackageReference Include="AllGreen.Lib" Version="2.0.4" />
+		<PackageReference Include="BarLauncher.EasyHelper.Test.Mock" Version="2.0.7-1647122617" />
+		<PackageReference Include="xunit" Version="2.4.1" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\BarLauncher.Volume.Lib\BarLauncher.Volume.Lib.csproj" />
+		<ProjectReference Include="..\BarLauncher.Volume.Test.Mock\BarLauncher.Volume.Test.Mock.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+﻿{
+  "ID": "609316FFB9474F4E89524D4DB50E78FC",
+  "ActionKeyword": "vol",
+  "Name": "Change volume",
+  "Description": "Change/Set volume from Wox",
+  "Author": "gissehel",
+  "Version": "0.0.1",
+  "Language": "csharp",
+  "Website": "https://github.com/gissehel/BarLauncher-Volume",
+  "IcoPath": "BarLauncher-Volume-64.png",
+  "ExecuteFileName": "BarLauncher.Volume.Wox.dll"
+}

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AudioSwitcher.AudioApi" Version="3.0.0" />
+		<PackageReference Include="AudioSwitcher.AudioApi.CoreAudio" Version="3.0.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\BarLauncher.Volume.Core\BarLauncher.Volume.Core.csproj" />
+	</ItemGroup>
+
+</Project>

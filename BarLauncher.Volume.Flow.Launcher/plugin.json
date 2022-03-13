@@ -1,0 +1,12 @@
+﻿{
+  "ID": "609316FF-B947-4F4E-8952-4D4DB50E78FC",
+  "ActionKeyword": "vol",
+  "Name": "Change volume",
+  "Description": "Change/Set volume from Flow Launcher",
+  "Author": "gissehel",
+  "Version": "0.0.1",
+  "Language": "csharp",
+  "Website": "https://github.com/gissehel/BarLauncher-Volume",
+  "IcoPath": "BarLauncher-Volume-64.png",
+  "ExecuteFileName": "BarLauncher.Volume.Flow.Launcher.dll"
+}

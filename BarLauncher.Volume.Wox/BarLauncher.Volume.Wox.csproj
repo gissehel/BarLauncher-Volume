@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BarLauncher.EasyHelper.Wox" Version="2.0.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\BarLauncher.Volume.Core\BarLauncher.Volume.Core.csproj" />
+		<ProjectReference Include="..\BarLauncher.Volume.Lib\BarLauncher.Volume.Lib.csproj" />
+		<ProjectReference Include="..\BarLauncher.Volume.Win\BarLauncher.Volume.Win.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="plugin.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="BarLauncher-Volume-64.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>
